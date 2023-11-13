@@ -19,7 +19,7 @@
 <script>
   var fs = require('fs');
   function writeVotes(like){
-    fs.write('votes.csv', like, 'a');
+    fs.write('./votes.csv', like, 'a');
   }
 </script>
 <i onclick="writeVotes(-1)" class="fa fa-thumbs-down"></i>

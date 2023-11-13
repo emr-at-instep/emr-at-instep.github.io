@@ -1,1 +1,27 @@
-<h1>Hello world</h1>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+</head>
+<body>
+  <h1>Hello world</h1>
+
+<script>
+  var fs = require('fs');
+  function writeVotes(like){
+    fs.write('votes.csv', like, 'a');
+  }
+</script>
+<i onclick="writeVotes(-1)" class="fa fa-thumbs-down"></i>
+<i onclick="writeVotes(1)" class="fa fa-thumbs-up"></i>
+</body>

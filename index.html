@@ -1,22 +1,42 @@
-<html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html {
-  background-color: #0D102F;
-  min-height: 30;
-  max-height: 30;
-}
-
-body {
-  background-color: #0D102F;
-  font-size: 150%;
-}
-</style>
+  <meta charset="utf-8" />
+  <title>Firebase Meetup</title>
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
-<!-- LikeBtn.com BEGIN -->
-<span class="likebtn-wrapper" data-theme="custom" data-icon_l="hrt6" data-icon_d="alrt2" data-icon_l_c="#0d102f" data-icon_l_c_v="#05e785" data-icon_d_c="#0d102f" data-label_c="#0d102f" data-label_c_v="#0d102f" data-counter_l_c="#0d102f" data-counter_d_c="#0d102f" data-i18n_like="Got it!" data-white_label="true" data-show_dislike_label="true" data-counter_show="false" data-popup_disabled="true" data-share_enabled="false" data-tooltip_enabled="false" data-site_id="65649d886fd08be60eef7344" data-i18n_dislike="Not quite" data-i18n_after_like="Got it!" data-i18n_after_dislike="Not quite"></span>
-<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
-<!-- LikeBtn.com END -->
+  <div id="app">
+    <section id="like-dislike" style="display:block">
+      <button id="like"><i class="material-icons">favorite</i><span>Like</span></button>
+      <button id="dislike"><i class="material-icons">psychology_alt</i><span>I don't quite understand...</span></button>
+    </section>
+
+    <section id="message-submission" style="display:none">
+      <p>Which parts are you struggling with?</P>
+      <button id="section-a"><i class="material-icons">add_circle</i><span id="label-a">Data types</span></button>
+      
+      <button id="section-b"><i class="material-icons">add_circle</i><span id="label-b">Data classes</span></button>
+      
+      <button id="section-c"><i class="material-icons">add_circle</i><span id="label-c">Data structures</span></button>
+      
+      <button id="submit"><i class="material-icons">send</i><span>Submit</span></button>
+    </section>
+
+    <section id="thankyou-message" style="display:none">
+      <p>Thank you for submitting your feedback. We love to get your views on our materials and we're always working to update and improve. Good luck with the rest of your lesson!</p>
+    </section>
+  </div>
 </body>
